@@ -1,7 +1,8 @@
 Desafio 1: Gestão de Trilha de Conferência
+Italo Daldegan de Oliveira - italodaldegan@gmail.com
 
 Descrição:
-	Algoritmo para resolver o problema de alocação de palestras em uma conferência, dado que a grande quantidade de possibilidades para fazer essas alocações torna esse trabalho árduo. Sendo necessário o uso de uma solução computacional. É de interesse que a alocação das palestra atenda algumas critérios de restrição da própria conferência e que as alocações sejam feitas otimizando o tempo da conferência, gastando o menor número de sessões possíveis.
+	Algoritmo para resolver o problema de alocação de palestras em uma conferência. Dado que a grande quantidade de possibilidades para fazer essas alocações torna esse trabalho árduo, sendo necessário assim o uso de uma solução computacional. É de interesse que a alocação das palestra atenda alguns critérios de restrição da própria conferência e que as alocações sejam feitas otimizando o tempo da conferência, gastando o menor número de sessões possíveis.
 
 Implementação:
 	O algoritmo foi feito em java, fazendo uso da IDE Eclipse (versão 3.8.1) no Ubuntu 14.01 LTS. Não foram utilizadas bibliotecas externas para implementação, limitando ao uso de biblioteca para lista, números aleatórios e para lançar exceções.
@@ -10,20 +11,29 @@ Implementação:
 
 	O algoritmo gera algumas configurações para a alocação das palestras e seleciona a que faz melhor proveito do tempo, atendendo às restrições da conferência. Sendo essas restrições:
 	-Sessão matutina tem que começar às 09:00AM e terminar às 12:00PM
-	-Sessão vespertina tem que começar 01:00PM e terminar entre 04:00PM e 05:00PM.
-	As outras restrições são combertas por essas.
+	-Sessão vespertina tem que começar às 01:00PM e terminar entre 04:00PM e 05:00PM.
+	As outras restrições são cobertas por essas.
 	É importante resaltar que o algoritmo não gera a solução ótima, dado que a quantidade de possibilidade pode ser absurda dependendo da quantidade de palestras disponíveis. Ou seja, ele está limitado a uma solução gulosa, mas que atende bem aos requisitos.
 
-Requisito:
-	Para compilar esse programa é necessário que se tenha instalado na máquina o JDK (Java SE Development Kit - http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html). Porém, não é obrigatório a compilação, vide em execução.
+Resultado:
+	Após a execução do programa, a melhor alocação das palestras na conferência é impressa na tela. 
 
-	Para executar o programa é necessário que se tenha instalado na máquina o Java (https://www.java.com/pt_BR/download).
+Requisito:
+	Para compilar esse programa é necessário que se tenha instalado o JDK (Java SE Development Kit - http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html). Porém, não é obrigatório a geração de um executável, vide em execução.
+
+	Para executar o programa é necessário que se tenha instalado a máquina virtual Java (https://www.java.com/pt_BR/download).
 
 Como compilar:
-	Usando o Eclipse: importe esse arquivo .zip no Eclipse. Tendo o projeto importado, clique com o botão direito sobre ele e seleciona a opção exportar, em seguida seleciona a opção "arquivo jar executável" e clique em "Próximo". Na janela que será aberta, seleciona na opção "configuração de execução" a classe "Main - CronogramaConferencia", escolha o local para exportação e clique em "Finalizar".
+	Usando o Eclipse: importe esse arquivo .zip no Eclipse. Tendo o projeto importado, clique com o botão direito sobre ele e seleciona a opção exportar, em seguida seleciona a opção "arquivo jar executável" e clique em "Próximo". Na janela que será aberta, seleciona na opção "configuração de execução" a classe "Main - CronogramaConferencia", em seguida, escolha o local para exportação e clique em "Finalizar".
 
 Como executar:
 	Executar sem .jar: Para fazer a execução sem a geração de um arquivo .jar, basta descompactar o zipado em que este arquivo está contido, entrar na pasta /bin e rodar o seguinte comando no terminal/cmd: java agenda.Main <arquivo de entrada>
+	Por exemplo: java agenda.Main /home/usr/palestras
 
 	Executar usando .jar: Tendo o .jar (executável), basta abrir o terminal/cmd e executar o seguinte comando, no diretório do executável, seguido do arquivo de entrada: java -jar <nome dado ao executavel>.jar <arquivo de entrada>.
 	Por exemplo: java -jar geraCronograma.jar /home/usr/palestras
+
+Git do código:
+	https://github.com/litodaldegan/geraCronograma.git
+
+	Não me lembrei subir os arquivos a medida que fui realizando a implementação. Tenho o custume de utilizar o git somente quando estou programando usando Sublime. Porém, subi o código final no git caso haja algum problema com o zipado. O diretório é privado, não haverá problema de vazamento das informações.
